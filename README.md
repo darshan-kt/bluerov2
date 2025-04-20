@@ -3,28 +3,42 @@
 This repository contains the robot description and necessary launch files to describe and simulate the BlueROV2 (unmanned underwater vehicle) with [Gazebo](https://gazebosim.org/home) and its [hydrodynamics plugins](https://gazebosim.org/api/gazebo/6.1/underwater_vehicles.html) under ROS 2.
 
 
+## Installation 
+
+Clone the package and its dependencies (if from source) in your ROS 2 workspace `src` and compile with `colcon build`
+mkdir ~blueSim_ws/src
+cd ~blueSim_ws/src
+git clone 
+
+Note: In the same directory(~blueSim_ws/src) install all the individual requirements dependencies packages
+
 ## Requirements
 
 ### For the description
 
-- [Xacro ](https://github.com/ros/xacro/tree/ros2), installable through `apt install ros-${ROS_DISTRO}-xacro`
-- [simple_launch](https://github.com/oKermorgant/simple_launch), installable through `apt install ros-${ROS_DISTRO}-simple-launch`
+- [Xacro ](https://github.com/ros/xacro/tree/ros2), installable through `sudo apt install ros-${ROS_DISTRO}-xacro`
+- [simple_launch](https://github.com/oKermorgant/simple_launch), installable through `sudo apt install ros-${ROS_DISTRO}-simple-launch`
 
 ### Gazebo
 
 - ROS 2 with Gazebo Fortress or newer with `ros_gz_bridge`
     - Look out for your [ROS 2 / Gazebo versions combination](https://gazebosim.org/docs/garden/ros_installation)
+    - `sudo apt install ros-${ROS_DISTRO}-ros-ign-*`
 - [pose_to_tf](https://github.com/oKermorgant/pose_to_tf), to get the ground truth from Gazebo if needed.
+- git clone https://github.com/oKermorgant/pose_to_tf.git
+
 
 ### For the control part
 
-- [slider_publisher](https://github.com/oKermorgant/slider_publisher), installable through `apt install ros-${ROS_DISTRO}-slider-publisher`
+- [slider_publisher](https://github.com/oKermorgant/slider_publisher), installable through `sudo apt install ros-${ROS_DISTRO}-slider-publisher`
 - [auv_control](https://github.com/CentraleNantesROV/auv_control) for basic control laws, from source
+- git clone https://github.com/CentraleNantesROV/thruster_manager.git
+- git clone https://github.com/CentraleNantesROV/auv_control.git
 
+### Compilation
+cd ~blueSim_ws
+colcon build
 
-## Installation 
-
-Clone the package and its dependencies (if from source) in your ROS 2 workspace `src` and compile with `colcon`
 
 ## Running 
 
