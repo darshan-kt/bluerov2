@@ -6,9 +6,11 @@ This repository contains the robot description and necessary launch files to des
 ## Installation 
 
 Clone the package and its dependencies (if from source) in your ROS 2 workspace `src` and compile with `colcon build`
+```bash
 mkdir ~blueSim_ws/src
 cd ~blueSim_ws/src
-git clone 
+git clone
+```
 
 Note: In the same directory(~blueSim_ws/src) install all the individual requirements dependencies packages
 
@@ -36,9 +38,12 @@ Note: In the same directory(~blueSim_ws/src) install all the individual requirem
 - git clone https://github.com/CentraleNantesROV/auv_control.git
 
 ### Compilation
+
+```bash
 cd ~blueSim_ws
 colcon build
 
+```
 
 ## Running 
 
