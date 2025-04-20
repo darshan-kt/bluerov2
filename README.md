@@ -78,6 +78,7 @@ In this case spawn the robot without manual sliders and run e.g. a cascaded PID 
 ros2 launch bluerov2_description upload_bluerov2_launch.py
 ros2 launch bluerov2_control cascaded_pids_launch.py sliders:=true
 ```
+![underwater_robot](https://github.com/user-attachments/assets/d1f764c0-702e-40a8-80ca-087d01f3ccb7)
 
 
 ## License
