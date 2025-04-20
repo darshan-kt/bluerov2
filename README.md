@@ -9,7 +9,7 @@ Clone the package and its dependencies (if from source) in your ROS 2 workspace 
 ```bash
 mkdir ~blueSim_ws/src
 cd ~blueSim_ws/src
-git clone
+git clone https://github.com/CentraleNantesROV/bluerov2.git
 ```
 
 Note: In the same directory(~blueSim_ws/src) install all the individual requirements dependencies packages
